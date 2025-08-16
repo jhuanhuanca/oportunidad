@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Momento de Cambio Ha Llegado | Únete al Éxito</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gold': '#FFD700',
+                        'dark-gold': '#B8860B',
+                        'navy': '#1e3a8a',
+                        'light-blue': '#3b82f6',
+                        'rose': '#f43f5e',
+                        'emerald': '#10b981'
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #041031 0%, #082a61 60%, #0a8d61 100%); }
+        .gold-gradient { background: linear-gradient(135deg, #FFD700 0%, #B8860B 100%); }
+        .glass {
+            background: rgba(255,255,255,0.25);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(8px);
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.18);
+        }
+        .pulse-animation { animation: pulse 2s infinite; }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.07); }
+        }
+        .floating { animation: floating 3s ease-in-out infinite; }
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-12px); }
+        }
+        .shine-btn {
+            position: relative;
+            overflow: hidden;
+        }
+        .shine-btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(120deg, transparent 40%, rgba(255,255,255,0.5) 50%, transparent 60%);
+            transform: rotate(25deg);
+            animation: shine 2.5s infinite;
+        }
+        @keyframes shine {
+            0% { left: -50%; }
+            100% { left: 100%; }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 via-white to-emerald-50">
+    <!-- Header -->
+    <header class="gradient-bg text-white py-6 px-6 shadow-2xl">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="text-3xl font-extrabold drop-shadow-lg flex items-center gap-2">
+                <span class="text-gold">✨</span> ÉXITO TOTAL
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <span class="text-gold font-semibold text-lg animate-pulse">🔥 ÚLTIMOS CUPOS DISPONIBLES</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-center md:text-left">
+                    <div class="bg-gold text-navy px-6 py-3 rounded-full inline-block mb-8 font-bold text-base shadow-lg">
+                        ⚡ ACCESO SOLO POR INVITACIÓN
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-extrabold mb-8 leading-tight drop-shadow-lg">
+                        ¿Cansado de vivir 
+                        <span class="text-gold">al límite</span> 
+                        cada mes?
+                    </h1>
+                    <p class="text-2xl md:text-3xl mb-10 text-blue-100 font-semibold drop-shadow">
+                        Descubre el sistema que está cambiando la vida de miles de personas. 
+                        <strong class="text-gold">Este es tu momento de brillar.</strong>
+                    </p>
+                    <button onclick="scrollToForm()" class="gold-gradient text-navy px-10 py-5 rounded-full text-2xl font-extrabold hover:shadow-2xl transform hover:scale-110 transition-all duration-300 pulse-animation shine-btn">
+                        🚀 QUIERO SER PARTE AHORA
+                    </button>
+                    <p class="text-base mt-6 text-blue-200 font-bold animate-pulse">⏰ Solo quedan 12 cupos este mes</p>
+                </div>
+                <div class="text-center floating">
+                    <div class="glass p-10 shadow-2xl">
+                        <div class="w-full h-72 bg-gradient-to-br from-gold via-rose to-dark-gold rounded-2xl flex items-center justify-center mb-8 shadow-lg">
+                            <div class="text-center text-navy">
+                                <div class="text-7xl mb-4">🏆</div>
+                                <div class="text-3xl font-extrabold">LIBERTAD</div>
+                                <div class="text-xl">FINANCIERA</div>
+                            </div>
+                        </div>
+                        <div class="text-navy text-center">
+                            <p class="font-extrabold text-xl">Vive la vida que mereces</p>
+                            <p class="text-base text-gray-600">Sin horarios • Sin jefes • Sin límites</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-24 px-6 bg-gradient-to-br from-white via-blue-50 to-emerald-100">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl font-extrabold text-navy mb-8 drop-shadow-lg">¿Por qué miles ya eligieron este camino?</h2>
+                <p class="text-2xl text-gray-600 font-semibold">Resultados reales que hablan por sí solos</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-10 mb-16">
+                <div class="glass p-10 rounded-2xl shadow-xl text-center hover:shadow-2xl transition-all duration-300 border-2 border-gold">
+                    <div class="text-6xl mb-6">💰</div>
+                    <h3 class="text-3xl font-extrabold text-navy mb-6">Ingresos Residuales</h3>
+                    <p class="text-gray-600 mb-6 text-lg">Genera dinero mientras duermes. Sistema probado que funciona 24/7.</p>
+                    <div class="text-gold font-extrabold text-2xl">+$2,000 USD promedio mensual</div>
+                </div>
+                
+                <div class="glass p-10 rounded-2xl shadow-xl text-center hover:shadow-2xl transition-all duration-300 border-2 border-emerald">
+                    <div class="text-6xl mb-6">🕐</div>
+                    <h3 class="text-3xl font-extrabold text-navy mb-6">Libertad de Tiempo</h3>
+                    <p class="text-gray-600 mb-6 text-lg">Trabaja desde donde quieras, cuando quieras. Tú decides tu horario.</p>
+                    <div class="text-gold font-extrabold text-2xl">Solo 2-3 horas diarias</div>
+                </div>
+                
+                <div class="glass p-10 rounded-2xl shadow-xl text-center hover:shadow-2xl transition-all duration-300 border-2 border-rose-400">
+                    <div class="text-6xl mb-6">🎯</div>
+                    <h3 class="text-3xl font-extrabold text-navy mb-6">Mentoría Personalizada</h3>
+                    <p class="text-gray-600 mb-6 text-lg">Acompañamiento paso a paso hasta lograr tus primeros $1,000.</p>
+                    <div class="text-gold font-extrabold text-2xl">Garantía de resultados</div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button onclick="scrollToForm()" class="bg-navy text-white px-10 py-5 rounded-full text-2xl font-extrabold hover:bg-blue-800 transform hover:scale-110 transition-all duration-300 shine-btn">
+                    ✨ ÚNETE AHORA - Es Facil
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-24 px-6 bg-gradient-to-br from-blue-50 via-white to-emerald-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl font-extrabold text-navy mb-8 drop-shadow-lg">Historias de éxito reales</h2>
+                <p class="text-2xl text-gray-600 font-semibold">Personas como tú que ya cambiaron su vida</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="glass p-10 rounded-2xl shadow-xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-20 h-20 bg-gold rounded-full flex items-center justify-center text-3xl font-extrabold text-navy mr-6 shadow-lg border-4 border-white">
+                            MA
+                        </div>
+                        <div>
+                            <h4 class="font-extrabold text-navy text-xl">Maribel Almanza</h4>
+                            <p class="text-base text-gray-600">Madre soltera, Bolivia</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6 text-lg">"En 6 meses pasé de ganar $8,000 pesos a generar $35,000 mensuales. Ahora puedo darle a mi hijo todo lo que necesita."</p>
+                    <div class="text-gold font-extrabold text-xl">⭐⭐⭐⭐⭐</div>
+                </div>
+                
+                <div class="glass p-10 rounded-2xl shadow-xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-20 h-20 bg-gold rounded-full flex items-center justify-center text-3xl font-extrabold text-navy mr-6 shadow-lg border-4 border-white">
+                            MR
+                        </div>
+                        <div>
+                            <h4 class="font-extrabold text-navy text-xl">Mateo Reyes</h4>
+                            <p class="text-base text-gray-600">Ex-empleado, Bolivia</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6 text-lg">"Dejé mi trabajo tradicional y ahora genero 3 veces más dinero trabajando desde casa. La mejor decisión de mi vida."</p>
+                    <div class="text-gold font-extrabold text-xl">⭐⭐⭐⭐⭐</div>
+                </div>
+                
+                <div class="glass p-10 rounded-2xl shadow-xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-20 h-20 bg-gold rounded-full flex items-center justify-center text-3xl font-extrabold text-navy mr-6 shadow-lg border-4 border-white">
+                            AS
+                        </div>
+                        <div>
+                            <h4 class="font-extrabold text-navy text-xl">Ana Sofía</h4>
+                            <p class="text-base text-gray-600">Estudiante, España</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6 text-lg">"Mientras estudio, genero €1,500 mensuales. Pago mis estudios y ayudo a mi familia. ¡Increíble!"</p>
+                    <div class="text-gold font-extrabold text-xl">⭐⭐⭐⭐⭐</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form -->
+    <section id="registro" class="gradient-bg py-24 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="glass rounded-3xl p-10 md:p-16 shadow-2xl border-2 border-gold">
+                <div class="text-center mb-10">
+                    <div class="bg-gold text-navy px-8 py-4 rounded-full inline-block mb-8 font-extrabold text-lg shadow-lg">
+                        🔥 OFERTA LIMITADA - SOLO HOY
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-navy mb-6 drop-shadow-lg">
+                        Reserva tu cupo GRATIS
+                    </h2>
+                    <p class="text-2xl text-black -600 mb-8 font-semibold">
+                        Accede a la presentación exclusiva que está cambiando vidas
+                    </p>
+                    <div class="bg-red-100 border border-red-300 rounded-lg p-6 mb-8 shadow-lg">
+                        <p class="text-red-700 font-extrabold text-lg">⏰ Solo quedan <span id="countdown">12</span> cupos disponibles</p>
+                    </div>
+                </div>
+                
+                <form id="registrationForm" class="max-w-md mx-auto">
+                    <div class="mb-8">
+                        <label class="block text-navy font-extrabold mb-3 text-lg">Nombre completo *</label>
+                        <input type="text" id="nombre" required class="w-full px-5 py-4 border-2 border-gray-300 rounded-lg focus:border-gold focus:outline-none text-lg shadow-md bg-white/80">
+                    </div>
+                    
+                    <div class="mb-8">
+                        <label class="block text-navy font-extrabold mb-3 text-lg">Email *</label>
+                        <input type="email" id="email" required class="w-full px-5 py-4 border-2 border-gray-300 rounded-lg focus:border-gold focus:outline-none text-lg shadow-md bg-white/80">
+                    </div>
+                    
+                    <div class="mb-8">
+                        <label class="block text-navy font-extrabold mb-3 text-lg">Cedula de identidad</label>
+                        <input type="tel" id="whatsapp"  class="w-full px-5 py-4 border-2 border-gray-300 rounded-lg focus:border-gold focus:outline-none text-lg shadow-md bg-white/80">
+                    </div>
+                    
+                    <button type="button" onclick="window.open('https://wa.me/59176372062?text=quiero%20serparte%20de%20esteproyecto', '_blank')" class="w-full gold-gradient text-navy px-10 py-5 rounded-full text-2xl font-extrabold hover:shadow-2xl transform hover:scale-110 transition-all duration-300 pulse-animation shine-btn">
+                        🚀 RESERVAR MI CUPO GRATIS
+                    </button>
+                    
+                    <p class="text-base text-gray-600 text-center mt-6 font-semibold">
+                        ✅ Sin costo • ✅ Sin compromiso • ✅ Acceso inmediato
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Urgency Section -->
+    <section class="py-20 px-6 bg-gradient-to-br from-red-50 via-white to-rose-100">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-extrabold text-red-700 mb-8 drop-shadow-lg">⚠️ No dejes pasar esta oportunidad</h2>
+            <p class="text-2xl text-gray-700 mb-10 font-semibold">
+                Cada día que esperas, es un día menos para construir tu libertad financiera. 
+                <strong>Las oportunidades no esperan.</strong>
+            </p>
+            <div class="grid md:grid-cols-3 gap-8 mb-10">
+                <div class="glass p-8 rounded-lg shadow-xl border-2 border-rose-400">
+                    <div class="text-4xl mb-4">⏰</div>
+                    <p class="font-extrabold text-navy text-lg">Tiempo limitado</p>
+                    <p class="text-base text-gray-600">Esta oferta vence pronto</p>
+                </div>
+                <div class="glass p-8 rounded-lg shadow-xl border-2 border-gold">
+                    <div class="text-4xl mb-4">👥</div>
+                    <p class="font-extrabold text-navy text-lg">Cupos limitados</p>
+                    <p class="text-base text-gray-600">Solo 50 personas por mes</p>
+                </div>
+                <div class="glass p-8 rounded-lg shadow-xl border-2 border-emerald">
+                    <div class="text-4xl mb-4">🎯</div>
+                    <p class="font-extrabold text-navy text-lg">Resultados garantizados</p>
+                    <p class="text-base text-gray-600">O te devolvemos tu tiempo</p>
+                </div>
+            </div>
+            <button onclick="scrollToForm()" class="bg-red-600 text-white px-10 py-5 rounded-full text-2xl font-extrabold hover:bg-red-700 transform hover:scale-110 transition-all duration-300 shine-btn">
+                🔥 NO QUIERO PERDER ESTA OPORTUNIDAD
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-br from-navy via-blue-900 to-emerald-900 text-white py-16 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-10">
+                <div>
+                    <h3 class="text-3xl font-extrabold mb-6 text-gold">✨ ÉXITO TOTAL</h3>
+                    <p class="text-blue-200 font-semibold">Transformando vidas a través del emprendimiento digital.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-extrabold mb-6 text-lg">Contacto</h4>
+                    <p class="text-blue-200 mb-3">📧 hgwemprende@gmail.com</p>
+                    <p class="text-blue-200 mb-3">📱 +591 76372062</p>
+                    <p class="text-blue-200">🌍 Disponible mundialmente</p>
+                </div>
+                
+                
+                
+                <div>
+                    <h4 class="font-extrabold mb-6 text-lg">Legal</h4>
+                    <div class="space-y-3">
+                        <a href="#" class="text-blue-200 hover:text-gold transition-colors font-semibold">Términos y Condiciones</a><br>
+                        <a href="#" class="text-blue-200 hover:text-gold transition-colors font-semibold">Política de Privacidad</a><br>
+                        <a href="#" class="text-blue-200 hover:text-gold transition-colors font-semibold">Aviso Legal</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-blue-800 mt-10 pt-10 text-center">
+                <p class="text-blue-200 font-semibold">
+                    © 2025 Éxito Total. Todos los derechos reservados @jansoft. 
+                    <strong class="text-gold">Tu privacidad es importante para nosotros.</strong>
+                </p>
+                <p class="text-base text-black-300 mt-3">
+                    Los resultados pueden variar según el esfuerzo individual. No garantizamos ingresos específicos.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Countdown animation
+        let cupos = 12;
+        const countdownElement = document.getElementById('countdown');
+        
+        setInterval(() => {
+            if (cupos > 3) {
+                cupos--;
+                countdownElement.textContent = cupos;
+            }
+        }, 30000); // Reduce cada 30 segundos
+
+        // Smooth scroll to form
+        function scrollToForm() {
+            document.getElementById('registro').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Form submission
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            const whatsapp = document.getElementById('whatsapp').value;
+            
+            if (nombre && email && whatsapp) {
+                alert(`¡Felicidades ${nombre}! 🎉\n\nTu cupo ha sido reservado exitosamente.\n\nRecibirás un WhatsApp en los próximos 5 minutos con los detalles de tu presentación exclusiva.\n\n¡Prepárate para cambiar tu vida!`);
+                this.reset();
+                cupos = Math.max(1, cupos - 1);
+                countdownElement.textContent = cupos;
+            }
+        });
+
+        // Add floating animation to testimonials on scroll
+        window.addEventListener('scroll', function() {
+            const testimonials = document.querySelectorAll('.glass');
+            testimonials.forEach((testimonial, index) => {
+                const rect = testimonial.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    testimonial.style.transform = `translateY(${Math.sin(Date.now() * 0.001 + index) * 7}px)`;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
