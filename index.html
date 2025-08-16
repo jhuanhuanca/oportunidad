@@ -235,21 +235,35 @@
                         <label class="block text-navy font-extrabold mb-3 text-lg">Nombre completo *</label>
                         <input type="text" id="nombre" required class="w-full px-5 py-4 border-2 border-gray-300 rounded-lg focus:border-gold focus:outline-none text-lg shadow-md bg-white/80">
                     </div>
-                    
+
                     <div class="mb-8">
                         <label class="block text-navy font-extrabold mb-3 text-lg">Email *</label>
                         <input type="email" id="email" required class="w-full px-5 py-4 border-2 border-gray-300 rounded-lg focus:border-gold focus:outline-none text-lg shadow-md bg-white/80">
                     </div>
-                    
+
                     <div class="mb-8">
                         <label class="block text-navy font-extrabold mb-3 text-lg">Cedula de identidad</label>
-                        <input type="tel" id="whatsapp"  class="w-full px-5 py-4 border-2 border-gray-300 rounded-lg focus:border-gold focus:outline-none text-lg shadow-md bg-white/80">
+                        <input type="text" id="cedula" class="w-full px-5 py-4 border-2 border-gray-300 rounded-lg focus:border-gold focus:outline-none text-lg shadow-md bg-white/80">
                     </div>
-                    
-                    <button type="button" onclick="window.open('https://wa.me/59176372062?text=quiero%20serparte%20de%20esteproyecto', '_blank')" class="w-full gold-gradient text-navy px-10 py-5 rounded-full text-2xl font-extrabold hover:shadow-2xl transform hover:scale-110 transition-all duration-300 pulse-animation shine-btn">
+
+                    <button type="submit" class="w-full gold-gradient text-navy px-10 py-5 rounded-full text-2xl font-extrabold hover:shadow-2xl transform hover:scale-110 transition-all duration-300 pulse-animation shine-btn">
                         🚀 RESERVAR MI CUPO GRATIS
                     </button>
-                    
+                    <script>
+                    document.getElementById('registrationForm').addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        const nombre = document.getElementById('nombre').value;
+                        const email = document.getElementById('email').value;
+                        const cedula = document.getElementById('cedula').value;
+                        if (nombre && email) {
+                            const mensaje = encodeURIComponent(
+                                `Hola, quiero ser parte de este proyecto.\n\nNombre: ${nombre}\nEmail: ${email}\nCédula de identidad: ${cedula}`
+                            );
+                            window.open(`https://wa.me/59176372062?text=${mensaje}`, '_blank');
+                            this.reset();
+                        }
+                    });
+                    </script>
                     <p class="text-base text-gray-600 text-center mt-6 font-semibold">
                         ✅ Sin costo • ✅ Sin compromiso • ✅ Acceso inmediato
                     </p>
@@ -322,7 +336,7 @@
                     © 2025 Éxito Total. Todos los derechos reservados @jansoft. 
                     <strong class="text-gold">Tu privacidad es importante para nosotros.</strong>
                 </p>
-                <p class="text-base text-black-300 mt-3">
+                <p class="text-base text-black -300 mt-3">
                     Los resultados pueden variar según el esfuerzo individual. No garantizamos ingresos específicos.
                 </p>
             </div>
